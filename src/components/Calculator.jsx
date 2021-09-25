@@ -28,14 +28,18 @@ const Calculator = () => {
     <>
     <div className="calc-container">
       <input type="text" name="input1" onChange={event => setInput1(event.target.value)} value={input1} />
+      
       <select name="operator" onChange={event => setOperator(event.target.value)} className="operator" value={operator}>
         <option value="+">+</option>
         <option value="-">-</option>
         <option value="*">*</option>
         <option value="/">/</option>
-    </select>
+      </select>
+
       <input type="text" name="input2" onChange={event => setInput2(event.target.value)} value={input2} />
+
       <button onClick={event => setResult(calculation(input1, operator, input2))}>=</button>
+      
       <input type="text" onChange={event => setResult(event.target.value)} value={result} />
     </div>
     </>
